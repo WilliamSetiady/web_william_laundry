@@ -14,6 +14,7 @@ if (isset($_POST['email'])) {
         $row = mysqli_fetch_assoc($query);
         $_SESSION['ID_USER'] = $row['id'];
         $_SESSION['USER_NAME'] = $row['name'];
+        $_SESSION['ID_LEVEL'] = $row['id_level'];
         header("location:home.php");
     } else {
         header("location:index.php?login=error");
@@ -46,7 +47,7 @@ if (isset($_POST['email'])) {
 
 </head>
 
-<body class="bg-gradient-primary">
+<body class="bg-gradient-info">
 
     <div class="container">
 
@@ -60,8 +61,8 @@ if (isset($_POST['email'])) {
                         <!-- Nested Row within Card Body -->
                         <div class="row">
                             <div class="col-lg-6 d-none d-lg-block bg-login-image">
-                                <img style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);"
-                                    src="assets/laundry.jpg" alt="">
+                               <img style="width: 100%; height: auto; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);" src="assets/s&s.png" alt="">
+
 
                             </div>
                             <div class="col-lg-6">
